@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "outDir": "lib",
+    "rootDir": "src",
+    "target": "es2023",
+    "module": "esnext",
+    "emitDeclarationOnly": true,
+    "composite": true,
+    "incremental": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "moduleResolution": "bundler",
+  },
+  "include": [
+    "src",
+  ],
+}

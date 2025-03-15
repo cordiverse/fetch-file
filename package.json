@@ -1,0 +1,43 @@
+{
+  "name": "@cordisjs/fetch-file",
+  "description": "Fetch for `file:` URLs",
+  "version": "1.0.0",
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./lib/node.d.ts",
+      "node": "./lib/node.js",
+      "default": "./lib/browser.js"
+    },
+    "./src/*": "./src/*",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cordiverse/fetch-file.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cordiverse/fetch-file/issues"
+  },
+  "homepage": "https://github.com/cordiverse/fetch-file",
+  "author": "Shigma <shigma10826@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc -b && dumble"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.0",
+    "dumble": "^0.2.2",
+    "esbuild": "^0.25.1",
+    "typescript": "^5.8.2"
+  },
+  "dependencies": {
+    "cosmokit": "^1.7.3",
+    "file-type": "^20.4.1",
+    "mime-types": "^2.1.35"
+  }
+}
