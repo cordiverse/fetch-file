@@ -7,7 +7,7 @@ import { contentType } from 'mime-types'
 
 namespace fetchFile {
   export interface Options {
-    attachment?: boolean
+    download?: boolean
     onError?: (reason: any) => void
   }
 }
@@ -24,7 +24,7 @@ async function fetchFile(url: string | URL, init: RequestInit = {}, options: fet
       statusText: 'OK',
       headers: {
         'content-type': fileType?.mime || contentType(filename) || 'application/octet-stream',
-        ...options.attachment ? {
+        ...options.download ? {
           'content-disposition': `attachment; filename*=UTF-8''${encodeURIComponent(filename)}`,
         } : {},
       },
