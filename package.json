@@ -1,7 +1,7 @@
 {
   "name": "@cordisjs/fetch-file",
   "description": "Fetch for `file:` URLs",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "sideEffects": false,
   "type": "module",
   "exports": {
@@ -31,7 +31,7 @@
   },
   "devDependencies": {
     "@types/mime-types": "^2.1.4",
-    "@types/node": "^22.13.0",
+    "@types/node": "^22.13.10",
     "dumble": "^0.2.2",
     "esbuild": "^0.25.1",
     "typescript": "^5.8.2"

@@ -24,9 +24,11 @@ async function fetchFile(url: string | URL, init: RequestInit = {}, options: fet
       statusText: 'OK',
       headers: {
         'content-type': fileType?.mime || contentType(filename) || 'application/octet-stream',
-        ...options.download ? {
-          'content-disposition': `attachment; filename*=UTF-8''${encodeURIComponent(filename)}`,
-        } : {},
+        ...options.download === true
+          ? { 'content-disposition': `attachment; filename*=UTF-8''${encodeURIComponent(filename)}` }
+          : options.download === false
+            ? { 'content-disposition': 'inline' }
+            : {},
       },
     })
   } catch (error: any) {
